@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="pandas_cub",
-    version="0.0.1",
+    version="0.0.2",
     author="Ted Petrou",
     author_email="ted@dunderdata.com",
     description="A simple data analysis library similar to pandas",
