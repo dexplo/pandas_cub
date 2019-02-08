@@ -1,5 +1,3 @@
-
-
 # How to use pandas_cub
 
 The README.ipynb notebook will serve as the documentation and usage guide to pandas_cub.

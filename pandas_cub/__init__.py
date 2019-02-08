@@ -1,6 +1,6 @@
 import numpy as np
 
-__version__ = '0.0.2'
+__version__ = '0.0.3'
 
 
 DTYPE_NAME = {'O': 'string', 'i': 'int', 'f': 'float', 'b': 'bool'}
