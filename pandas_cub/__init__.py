@@ -151,7 +151,7 @@ class DataFrame:
                     <td>data</td>
                 </tr>
             </tbody>
-        <table>
+        </table>
         """
         html = '<table><thead><tr><th></th>'
         for col in self.columns:
@@ -206,7 +206,7 @@ class DataFrame:
                         html += f'<td>{values[i]:10}</td>'
                 html += '</tr>'
 
-            html += '</tbody></table>'
+        html += '</tbody></table>'
         return html
 
     @property

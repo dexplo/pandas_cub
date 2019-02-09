@@ -1,3 +1,4 @@
+
 # How to use pandas_cub
 
 The README.ipynb notebook will serve as the documentation and usage guide to pandas_cub.
@@ -39,16 +40,22 @@ pandas_cub syntax is very similar to pandas, but implements much fewer methods. 
 
 pandas_cub consists of a single function, `read_csv`, that has a single parameter, the location of the file you would like to read in as a DataFrame. This function can only handle simple CSV's and the delimiter must be a comma. A sample employee dataset is provided in the data directory. Notice that the visual output of the DataFrame is nearly identical to that of a pandas DataFrame. The `head` method returns the first 5 rows by default.
 
+
 ```python
 import pandas_cub as pdc
 ```
+
 
 ```python
 df = pdc.read_csv('data/employee.csv')
 df.head()
 ```
 
+
+
+
 <table><thead><tr><th></th><th>dept      </th><th>race      </th><th>gender    </th><th>salary    </th></tr></thead><tbody><tr><td><strong>0</strong></td><td>Houston Police Department-HPD</td><td>White     </td><td>Male      </td><td>     45279</td></tr><tr><td><strong>1</strong></td><td>Houston Fire Department (HFD)</td><td>White     </td><td>Male      </td><td>     63166</td></tr><tr><td><strong>2</strong></td><td>Houston Police Department-HPD</td><td>Black     </td><td>Male      </td><td>     66614</td></tr><tr><td><strong>3</strong></td><td>Public Works & Engineering-PWE</td><td>Asian     </td><td>Male      </td><td>     71680</td></tr><tr><td><strong>4</strong></td><td>Houston Airport System (HAS)</td><td>White     </td><td>Male      </td><td>     42390</td></tr></tbody></table>
+
 
 
 ### DataFrame properties
@@ -326,7 +333,7 @@ df.head()
 
 
 
-<table><thead><tr><th></th><th>department</th><th>race      </th><th>gender    </th><th>salary    </th><th>bonus     </th></tr></thead><tbody><tr><td><strong>0</strong></td><td>Houston Police Department-HPD</td><td>White     </td><td>Male      </td><td>     45279</td><td>      1000</td></tr><tr><td><strong>1</strong></td><td>Houston Fire Department (HFD)</td><td>White     </td><td>Male      </td><td>     63166</td><td>      1000</td></tr><tr><td><strong>2</strong></td><td>Houston Police Department-HPD</td><td>Black     </td><td>Male      </td><td>     66614</td><td>      1000</td></tr><tr><td><strong>3</strong></td><td>Public Works & Engineering-PWE</td><td>Asian     </td><td>Male      </td><td>     71680</td><td>      1000</td></tr><tr><td><strong>4</strong></td><td>Houston Airport System (HAS)</td><td>White     </td><td>Male      </td><td>     42390</td><td>      1000</td></tr>
+<table><thead><tr><th></th><th>department</th><th>race      </th><th>gender    </th><th>salary    </th><th>bonus     </th></tr></thead><tbody><tr><td><strong>0</strong></td><td>Houston Police Department-HPD</td><td>White     </td><td>Male      </td><td>     45279</td><td>      1000</td></tr><tr><td><strong>1</strong></td><td>Houston Fire Department (HFD)</td><td>White     </td><td>Male      </td><td>     63166</td><td>      1000</td></tr><tr><td><strong>2</strong></td><td>Houston Police Department-HPD</td><td>Black     </td><td>Male      </td><td>     66614</td><td>      1000</td></tr><tr><td><strong>3</strong></td><td>Public Works & Engineering-PWE</td><td>Asian     </td><td>Male      </td><td>     71680</td><td>      1000</td></tr><tr><td><strong>4</strong></td><td>Houston Airport System (HAS)</td><td>White     </td><td>Male      </td><td>     42390</td><td>      1000</td></tr></tbody></table>
 
 
 
@@ -342,7 +349,7 @@ df.head()
 
 
 
-<table><thead><tr><th></th><th>department</th><th>race      </th><th>gender    </th><th>salary    </th><th>bonus     </th></tr></thead><tbody><tr><td><strong>0</strong></td><td>Houston Police Department-HPD</td><td>White     </td><td>Male      </td><td>     45279</td><td>      1539</td></tr><tr><td><strong>1</strong></td><td>Houston Fire Department (HFD)</td><td>White     </td><td>Male      </td><td>     63166</td><td>      2885</td></tr><tr><td><strong>2</strong></td><td>Houston Police Department-HPD</td><td>Black     </td><td>Male      </td><td>     66614</td><td>       619</td></tr><tr><td><strong>3</strong></td><td>Public Works & Engineering-PWE</td><td>Asian     </td><td>Male      </td><td>     71680</td><td>      3010</td></tr><tr><td><strong>4</strong></td><td>Houston Airport System (HAS)</td><td>White     </td><td>Male      </td><td>     42390</td><td>      3180</td></tr>
+<table><thead><tr><th></th><th>department</th><th>race      </th><th>gender    </th><th>salary    </th><th>bonus     </th></tr></thead><tbody><tr><td><strong>0</strong></td><td>Houston Police Department-HPD</td><td>White     </td><td>Male      </td><td>     45279</td><td>      3536</td></tr><tr><td><strong>1</strong></td><td>Houston Fire Department (HFD)</td><td>White     </td><td>Male      </td><td>     63166</td><td>      1296</td></tr><tr><td><strong>2</strong></td><td>Houston Police Department-HPD</td><td>Black     </td><td>Male      </td><td>     66614</td><td>       511</td></tr><tr><td><strong>3</strong></td><td>Public Works & Engineering-PWE</td><td>Asian     </td><td>Male      </td><td>     71680</td><td>      4267</td></tr><tr><td><strong>4</strong></td><td>Houston Airport System (HAS)</td><td>White     </td><td>Male      </td><td>     42390</td><td>      3766</td></tr></tbody></table>
 
 
 
@@ -356,7 +363,7 @@ df['salary'] + df['bonus']
 
 
 
-<table><thead><tr><th></th><th>salary    </th></tr></thead><tbody><tr><td><strong>0</strong></td><td>     46818</td></tr><tr><td><strong>1</strong></td><td>     66051</td></tr><tr><td><strong>2</strong></td><td>     67233</td></tr><tr><td><strong>3</strong></td><td>     74690</td></tr><tr><td><strong>4</strong></td><td>     45570</td></tr><tr><td><strong>5</strong></td><td>    108399</td></tr><tr><td><strong>6</strong></td><td>     53162</td></tr><tr><td><strong>7</strong></td><td>    181993</td></tr><tr><td><strong>8</strong></td><td>     33989</td></tr><tr><td><strong>9</strong></td><td>     58163</td></tr><tr><strong><td>...</td></strong><td>...</td></tr><tr><td><strong>1525</strong></td><td>     31775</td></tr><tr><td><strong>1526</strong></td><td>     45543</td></tr><tr><td><strong>1527</strong></td><td>     31705</td></tr><tr><td><strong>1528</strong></td><td>     81998</td></tr><tr><td><strong>1529</strong></td><td>    105211</td></tr><tr><td><strong>1530</strong></td><td>     47273</td></tr><tr><td><strong>1531</strong></td><td>     69367</td></tr><tr><td><strong>1532</strong></td><td>     46605</td></tr><tr><td><strong>1533</strong></td><td>     55721</td></tr><tr><td><strong>1534</strong></td><td>     54934</td></tr></tbody></table>
+<table><thead><tr><th></th><th>salary    </th></tr></thead><tbody><tr><td><strong>0</strong></td><td>     48815</td></tr><tr><td><strong>1</strong></td><td>     64462</td></tr><tr><td><strong>2</strong></td><td>     67125</td></tr><tr><td><strong>3</strong></td><td>     75947</td></tr><tr><td><strong>4</strong></td><td>     46156</td></tr><tr><td><strong>5</strong></td><td>    110001</td></tr><tr><td><strong>6</strong></td><td>     53738</td></tr><tr><td><strong>7</strong></td><td>    185348</td></tr><tr><td><strong>8</strong></td><td>     32575</td></tr><tr><td><strong>9</strong></td><td>     57918</td></tr><tr><strong><td>...</td></strong><td>...</td></tr><tr><td><strong>1525</strong></td><td>     32936</td></tr><tr><td><strong>1526</strong></td><td>     49294</td></tr><tr><td><strong>1527</strong></td><td>     34218</td></tr><tr><td><strong>1528</strong></td><td>     82795</td></tr><tr><td><strong>1529</strong></td><td>    104900</td></tr><tr><td><strong>1530</strong></td><td>     46408</td></tr><tr><td><strong>1531</strong></td><td>     67050</td></tr><tr><td><strong>1532</strong></td><td>     47368</td></tr><tr><td><strong>1533</strong></td><td>     60013</td></tr><tr><td><strong>1534</strong></td><td>     52624</td></tr></tbody></table>
 
 
 
@@ -369,7 +376,7 @@ df.head()
 
 
 
-<table><thead><tr><th></th><th>department</th><th>race      </th><th>gender    </th><th>salary    </th><th>bonus     </th><th>total salary</th></tr></thead><tbody><tr><td><strong>0</strong></td><td>Houston Police Department-HPD</td><td>White     </td><td>Male      </td><td>     45279</td><td>      1539</td><td>     46818</td></tr><tr><td><strong>1</strong></td><td>Houston Fire Department (HFD)</td><td>White     </td><td>Male      </td><td>     63166</td><td>      2885</td><td>     66051</td></tr><tr><td><strong>2</strong></td><td>Houston Police Department-HPD</td><td>Black     </td><td>Male      </td><td>     66614</td><td>       619</td><td>     67233</td></tr><tr><td><strong>3</strong></td><td>Public Works & Engineering-PWE</td><td>Asian     </td><td>Male      </td><td>     71680</td><td>      3010</td><td>     74690</td></tr><tr><td><strong>4</strong></td><td>Houston Airport System (HAS)</td><td>White     </td><td>Male      </td><td>     42390</td><td>      3180</td><td>     45570</td></tr></tbody></table>
+<table><thead><tr><th></th><th>department</th><th>race      </th><th>gender    </th><th>salary    </th><th>bonus     </th><th>total salary</th></tr></thead><tbody><tr><td><strong>0</strong></td><td>Houston Police Department-HPD</td><td>White     </td><td>Male      </td><td>     45279</td><td>      3536</td><td>     48815</td></tr><tr><td><strong>1</strong></td><td>Houston Fire Department (HFD)</td><td>White     </td><td>Male      </td><td>     63166</td><td>      1296</td><td>     64462</td></tr><tr><td><strong>2</strong></td><td>Houston Police Department-HPD</td><td>Black     </td><td>Male      </td><td>     66614</td><td>       511</td><td>     67125</td></tr><tr><td><strong>3</strong></td><td>Public Works & Engineering-PWE</td><td>Asian     </td><td>Male      </td><td>     71680</td><td>      4267</td><td>     75947</td></tr><tr><td><strong>4</strong></td><td>Houston Airport System (HAS)</td><td>White     </td><td>Male      </td><td>     42390</td><td>      3766</td><td>     46156</td></tr></tbody></table>
 
 
 
@@ -384,7 +391,7 @@ df1.head()
 
 
 
-<table><thead><tr><th></th><th>salary    </th><th>bonus     </th></tr></thead><tbody><tr><td><strong>0</strong></td><td>    226395</td><td>      7695</td></tr><tr><td><strong>1</strong></td><td>    315830</td><td>     14425</td></tr><tr><td><strong>2</strong></td><td>    333070</td><td>      3095</td></tr><tr><td><strong>3</strong></td><td>    358400</td><td>     15050</td></tr><tr><td><strong>4</strong></td><td>    211950</td><td>     15900</td></tr></tbody></table>
+<table><thead><tr><th></th><th>salary    </th><th>bonus     </th></tr></thead><tbody><tr><td><strong>0</strong></td><td>    226395</td><td>     17680</td></tr><tr><td><strong>1</strong></td><td>    315830</td><td>      6480</td></tr><tr><td><strong>2</strong></td><td>    333070</td><td>      2555</td></tr><tr><td><strong>3</strong></td><td>    358400</td><td>     21335</td></tr><tr><td><strong>4</strong></td><td>    211950</td><td>     18830</td></tr></tbody></table>
 
 
 
@@ -426,7 +433,7 @@ df.min()
 
 
 
-<table><thead><tr><th></th><th>department</th><th>race      </th><th>gender    </th><th>salary    </th><th>bonus     </th><th>total salary</th></tr></thead><tbody><tr><td><strong>0</strong></td><td>Health & Human Services</td><td>Asian     </td><td>Female    </td><td>     24960</td><td>       108</td><td>     26249</td></tr></tbody></table>
+<table><thead><tr><th></th><th>department</th><th>race      </th><th>gender    </th><th>salary    </th><th>bonus     </th><th>total salary</th></tr></thead><tbody><tr><td><strong>0</strong></td><td>Health & Human Services</td><td>Asian     </td><td>Female    </td><td>     24960</td><td>       101</td><td>     25913</td></tr></tbody></table>
 
 
 
@@ -440,7 +447,7 @@ df.mean()
 
 
 
-<table><thead><tr><th></th><th>salary    </th><th>bonus     </th><th>total salary</th></tr></thead><tbody><tr><td><strong>0</strong></td><td> 56278.746</td><td>  2532.181</td><td> 58810.927</td></tr></tbody></table>
+<table><thead><tr><th></th><th>salary    </th><th>bonus     </th><th>total salary</th></tr></thead><tbody><tr><td><strong>0</strong></td><td> 56278.746</td><td>  2594.283</td><td> 58873.029</td></tr></tbody></table>
 
 
 
@@ -452,7 +459,7 @@ df.argmax()
 
 
 
-<table><thead><tr><th></th><th>department</th><th>race      </th><th>gender    </th><th>salary    </th><th>bonus     </th><th>total salary</th></tr></thead><tbody><tr><td><strong>0</strong></td><td>         3</td><td>         0</td><td>         0</td><td>       145</td><td>       786</td><td>       145</td></tr></tbody></table>
+<table><thead><tr><th></th><th>department</th><th>race      </th><th>gender    </th><th>salary    </th><th>bonus     </th><th>total salary</th></tr></thead><tbody><tr><td><strong>0</strong></td><td>         3</td><td>         0</td><td>         0</td><td>       145</td><td>      1516</td><td>       145</td></tr></tbody></table>
 
 
 
@@ -507,7 +514,7 @@ df.nunique()
 
 
 
-<table><thead><tr><th></th><th>department</th><th>race      </th><th>gender    </th><th>salary    </th><th>bonus     </th><th>total salary</th></tr></thead><tbody><tr><td><strong>0</strong></td><td>         6</td><td>         5</td><td>         2</td><td>       548</td><td>      1321</td><td>      1513</td></tr></tbody></table>
+<table><thead><tr><th></th><th>department</th><th>race      </th><th>gender    </th><th>salary    </th><th>bonus     </th><th>total salary</th></tr></thead><tbody><tr><td><strong>0</strong></td><td>         6</td><td>         5</td><td>         2</td><td>       548</td><td>      1318</td><td>      1524</td></tr></tbody></table>
 
 
 
@@ -567,7 +574,7 @@ df.rename({'department':'dept', 'bonus':'BONUS'}).head()
 
 
 
-<table><thead><tr><th></th><th>dept      </th><th>race      </th><th>gender    </th><th>salary    </th><th>BONUS     </th><th>total salary</th></tr></thead><tbody><tr><td><strong>0</strong></td><td>Houston Police Department-HPD</td><td>White     </td><td>Male      </td><td>     45279</td><td>      1539</td><td>     46818</td></tr><tr><td><strong>1</strong></td><td>Houston Fire Department (HFD)</td><td>White     </td><td>Male      </td><td>     63166</td><td>      2885</td><td>     66051</td></tr><tr><td><strong>2</strong></td><td>Houston Police Department-HPD</td><td>Black     </td><td>Male      </td><td>     66614</td><td>       619</td><td>     67233</td></tr><tr><td><strong>3</strong></td><td>Public Works & Engineering-PWE</td><td>Asian     </td><td>Male      </td><td>     71680</td><td>      3010</td><td>     74690</td></tr><tr><td><strong>4</strong></td><td>Houston Airport System (HAS)</td><td>White     </td><td>Male      </td><td>     42390</td><td>      3180</td><td>     45570</td></tr></tbody></table>
+<table><thead><tr><th></th><th>dept      </th><th>race      </th><th>gender    </th><th>salary    </th><th>BONUS     </th><th>total salary</th></tr></thead><tbody><tr><td><strong>0</strong></td><td>Houston Police Department-HPD</td><td>White     </td><td>Male      </td><td>     45279</td><td>      3536</td><td>     48815</td></tr><tr><td><strong>1</strong></td><td>Houston Fire Department (HFD)</td><td>White     </td><td>Male      </td><td>     63166</td><td>      1296</td><td>     64462</td></tr><tr><td><strong>2</strong></td><td>Houston Police Department-HPD</td><td>Black     </td><td>Male      </td><td>     66614</td><td>       511</td><td>     67125</td></tr><tr><td><strong>3</strong></td><td>Public Works & Engineering-PWE</td><td>Asian     </td><td>Male      </td><td>     71680</td><td>      4267</td><td>     75947</td></tr><tr><td><strong>4</strong></td><td>Houston Airport System (HAS)</td><td>White     </td><td>Male      </td><td>     42390</td><td>      3766</td><td>     46156</td></tr></tbody></table>
 
 
 
@@ -581,7 +588,7 @@ df.drop('race').head()
 
 
 
-<table><thead><tr><th></th><th>department</th><th>gender    </th><th>salary    </th><th>bonus     </th><th>total salary</th></tr></thead><tbody><tr><td><strong>0</strong></td><td>Houston Police Department-HPD</td><td>Male      </td><td>     45279</td><td>      1539</td><td>     46818</td></tr><tr><td><strong>1</strong></td><td>Houston Fire Department (HFD)</td><td>Male      </td><td>     63166</td><td>      2885</td><td>     66051</td></tr><tr><td><strong>2</strong></td><td>Houston Police Department-HPD</td><td>Male      </td><td>     66614</td><td>       619</td><td>     67233</td></tr><tr><td><strong>3</strong></td><td>Public Works & Engineering-PWE</td><td>Male      </td><td>     71680</td><td>      3010</td><td>     74690</td></tr><tr><td><strong>4</strong></td><td>Houston Airport System (HAS)</td><td>Male      </td><td>     42390</td><td>      3180</td><td>     45570</td></tr></tbody></table>
+<table><thead><tr><th></th><th>department</th><th>gender    </th><th>salary    </th><th>bonus     </th><th>total salary</th></tr></thead><tbody><tr><td><strong>0</strong></td><td>Houston Police Department-HPD</td><td>Male      </td><td>     45279</td><td>      3536</td><td>     48815</td></tr><tr><td><strong>1</strong></td><td>Houston Fire Department (HFD)</td><td>Male      </td><td>     63166</td><td>      1296</td><td>     64462</td></tr><tr><td><strong>2</strong></td><td>Houston Police Department-HPD</td><td>Male      </td><td>     66614</td><td>       511</td><td>     67125</td></tr><tr><td><strong>3</strong></td><td>Public Works & Engineering-PWE</td><td>Male      </td><td>     71680</td><td>      4267</td><td>     75947</td></tr><tr><td><strong>4</strong></td><td>Houston Airport System (HAS)</td><td>Male      </td><td>     42390</td><td>      3766</td><td>     46156</td></tr></tbody></table>
 
 
 
@@ -593,9 +600,12 @@ df.drop(['race', 'gender']).head()
 
 
 
-<table><thead><tr><th></th><th>department</th><th>salary    </th><th>bonus     </th><th>total salary</th></tr></thead><tbody><tr><td><strong>0</strong></td><td>Houston Police Department-HPD</td><td>     45279</td><td>      1539</td><td>     46818</td></tr><tr><td><strong>1</strong></td><td>Houston Fire Department (HFD)</td><td>     63166</td><td>      2885</td><td>     66051</td></tr><tr><td><strong>2</strong></td><td>Houston Police Department-HPD</td><td>     66614</td><td>       619</td><td>     67233</td></tr><tr><td><strong>3</strong></td><td>Public Works & Engineering-PWE</td><td>     71680</td><td>      3010</td><td>     74690</td></tr><tr><td><strong>4</strong></td><td>Houston Airport System (HAS)</td><td>     42390</td><td>      3180</td><td>     45570</td></tr></tbody></table>
+<table><thead><tr><th></th><th>department</th><th>salary    </th><th>bonus     </th><th>total salary</th></tr></thead><tbody><tr><td><strong>0</strong></td><td>Houston Police Department-HPD</td><td>     45279</td><td>      3536</td><td>     48815</td></tr><tr><td><strong>1</strong></td><td>Houston Fire Department (HFD)</td><td>     63166</td><td>      1296</td><td>     64462</td></tr><tr><td><strong>2</strong></td><td>Houston Police Department-HPD</td><td>     66614</td><td>       511</td><td>     67125</td></tr><tr><td><strong>3</strong></td><td>Public Works & Engineering-PWE</td><td>     71680</td><td>      4267</td><td>     75947</td></tr><tr><td><strong>4</strong></td><td>Houston Airport System (HAS)</td><td>     42390</td><td>      3766</td><td>     46156</td></tr></tbody></table>
 
 
+
+### Non-aggregating methods that keep all columns
+The next several methods are non-aggregating methods that return a DataFrame with the same exact shape as the original. They only work on boolean, integer and float columns and ignore string columns.
 
 Absolute value
 
@@ -607,7 +617,7 @@ df.abs().head()
 
 
 
-<table><thead><tr><th></th><th>salary    </th><th>bonus     </th><th>total salary</th></tr></thead><tbody><tr><td><strong>0</strong></td><td>     45279</td><td>      1539</td><td>     46818</td></tr><tr><td><strong>1</strong></td><td>     63166</td><td>      2885</td><td>     66051</td></tr><tr><td><strong>2</strong></td><td>     66614</td><td>       619</td><td>     67233</td></tr><tr><td><strong>3</strong></td><td>     71680</td><td>      3010</td><td>     74690</td></tr><tr><td><strong>4</strong></td><td>     42390</td><td>      3180</td><td>     45570</td></tr></tbody></table>
+<table><thead><tr><th></th><th>department</th><th>race      </th><th>gender    </th><th>salary    </th><th>bonus     </th><th>total salary</th></tr></thead><tbody><tr><td><strong>0</strong></td><td>Houston Police Department-HPD</td><td>White     </td><td>Male      </td><td>     45279</td><td>      3536</td><td>     48815</td></tr><tr><td><strong>1</strong></td><td>Houston Fire Department (HFD)</td><td>White     </td><td>Male      </td><td>     63166</td><td>      1296</td><td>     64462</td></tr><tr><td><strong>2</strong></td><td>Houston Police Department-HPD</td><td>Black     </td><td>Male      </td><td>     66614</td><td>       511</td><td>     67125</td></tr><tr><td><strong>3</strong></td><td>Public Works & Engineering-PWE</td><td>Asian     </td><td>Male      </td><td>     71680</td><td>      4267</td><td>     75947</td></tr><tr><td><strong>4</strong></td><td>Houston Airport System (HAS)</td><td>White     </td><td>Male      </td><td>     42390</td><td>      3766</td><td>     46156</td></tr></tbody></table>
 
 
 
@@ -621,7 +631,7 @@ df.cummax().head()
 
 
 
-<table><thead><tr><th></th><th>department</th><th>race      </th><th>gender    </th><th>salary    </th><th>bonus     </th><th>total salary</th></tr></thead><tbody><tr><td><strong>0</strong></td><td>Houston Police Department-HPD</td><td>White     </td><td>Male      </td><td>     45279</td><td>      1539</td><td>     46818</td></tr><tr><td><strong>1</strong></td><td>Houston Police Department-HPD</td><td>White     </td><td>Male      </td><td>     63166</td><td>      2885</td><td>     66051</td></tr><tr><td><strong>2</strong></td><td>Houston Police Department-HPD</td><td>White     </td><td>Male      </td><td>     66614</td><td>      2885</td><td>     67233</td></tr><tr><td><strong>3</strong></td><td>Public Works & Engineering-PWE</td><td>White     </td><td>Male      </td><td>     71680</td><td>      3010</td><td>     74690</td></tr><tr><td><strong>4</strong></td><td>Public Works & Engineering-PWE</td><td>White     </td><td>Male      </td><td>     71680</td><td>      3180</td><td>     74690</td></tr></tbody></table>
+<table><thead><tr><th></th><th>department</th><th>race      </th><th>gender    </th><th>salary    </th><th>bonus     </th><th>total salary</th></tr></thead><tbody><tr><td><strong>0</strong></td><td>Houston Police Department-HPD</td><td>White     </td><td>Male      </td><td>     45279</td><td>      3536</td><td>     48815</td></tr><tr><td><strong>1</strong></td><td>Houston Fire Department (HFD)</td><td>White     </td><td>Male      </td><td>     63166</td><td>      3536</td><td>     64462</td></tr><tr><td><strong>2</strong></td><td>Houston Police Department-HPD</td><td>Black     </td><td>Male      </td><td>     66614</td><td>      3536</td><td>     67125</td></tr><tr><td><strong>3</strong></td><td>Public Works & Engineering-PWE</td><td>Asian     </td><td>Male      </td><td>     71680</td><td>      4267</td><td>     75947</td></tr><tr><td><strong>4</strong></td><td>Houston Airport System (HAS)</td><td>White     </td><td>Male      </td><td>     71680</td><td>      4267</td><td>     75947</td></tr></tbody></table>
 
 
 
@@ -635,7 +645,7 @@ df.clip(40000, 60000).head()
 
 
 
-<table><thead><tr><th></th><th>salary    </th><th>bonus     </th><th>total salary</th></tr></thead><tbody><tr><td><strong>0</strong></td><td>     45279</td><td>     40000</td><td>     46818</td></tr><tr><td><strong>1</strong></td><td>     60000</td><td>     40000</td><td>     60000</td></tr><tr><td><strong>2</strong></td><td>     60000</td><td>     40000</td><td>     60000</td></tr><tr><td><strong>3</strong></td><td>     60000</td><td>     40000</td><td>     60000</td></tr><tr><td><strong>4</strong></td><td>     42390</td><td>     40000</td><td>     45570</td></tr></tbody></table>
+<table><thead><tr><th></th><th>department</th><th>race      </th><th>gender    </th><th>salary    </th><th>bonus     </th><th>total salary</th></tr></thead><tbody><tr><td><strong>0</strong></td><td>Houston Police Department-HPD</td><td>White     </td><td>Male      </td><td>     45279</td><td>     40000</td><td>     48815</td></tr><tr><td><strong>1</strong></td><td>Houston Fire Department (HFD)</td><td>White     </td><td>Male      </td><td>     60000</td><td>     40000</td><td>     60000</td></tr><tr><td><strong>2</strong></td><td>Houston Police Department-HPD</td><td>Black     </td><td>Male      </td><td>     60000</td><td>     40000</td><td>     60000</td></tr><tr><td><strong>3</strong></td><td>Public Works & Engineering-PWE</td><td>Asian     </td><td>Male      </td><td>     60000</td><td>     40000</td><td>     60000</td></tr><tr><td><strong>4</strong></td><td>Houston Airport System (HAS)</td><td>White     </td><td>Male      </td><td>     42390</td><td>     40000</td><td>     46156</td></tr></tbody></table>
 
 
 
@@ -649,7 +659,7 @@ df.round(-3).head()
 
 
 
-<table><thead><tr><th></th><th>salary    </th><th>bonus     </th><th>total salary</th></tr></thead><tbody><tr><td><strong>0</strong></td><td>     45000</td><td>      2000</td><td>     47000</td></tr><tr><td><strong>1</strong></td><td>     63000</td><td>      3000</td><td>     66000</td></tr><tr><td><strong>2</strong></td><td>     67000</td><td>      1000</td><td>     67000</td></tr><tr><td><strong>3</strong></td><td>     72000</td><td>      3000</td><td>     75000</td></tr><tr><td><strong>4</strong></td><td>     42000</td><td>      3000</td><td>     46000</td></tr></tbody></table>
+<table><thead><tr><th></th><th>department</th><th>race      </th><th>gender    </th><th>salary    </th><th>bonus     </th><th>total salary</th></tr></thead><tbody><tr><td><strong>0</strong></td><td>Houston Police Department-HPD</td><td>White     </td><td>Male      </td><td>     45000</td><td>      4000</td><td>     49000</td></tr><tr><td><strong>1</strong></td><td>Houston Fire Department (HFD)</td><td>White     </td><td>Male      </td><td>     63000</td><td>      1000</td><td>     64000</td></tr><tr><td><strong>2</strong></td><td>Houston Police Department-HPD</td><td>Black     </td><td>Male      </td><td>     67000</td><td>      1000</td><td>     67000</td></tr><tr><td><strong>3</strong></td><td>Public Works & Engineering-PWE</td><td>Asian     </td><td>Male      </td><td>     72000</td><td>      4000</td><td>     76000</td></tr><tr><td><strong>4</strong></td><td>Houston Airport System (HAS)</td><td>White     </td><td>Male      </td><td>     42000</td><td>      4000</td><td>     46000</td></tr></tbody></table>
 
 
 
@@ -663,7 +673,7 @@ df.copy().head()
 
 
 
-<table><thead><tr><th></th><th>department</th><th>race      </th><th>gender    </th><th>salary    </th><th>bonus     </th><th>total salary</th></tr></thead><tbody><tr><td><strong>0</strong></td><td>Houston Police Department-HPD</td><td>White     </td><td>Male      </td><td>     45279</td><td>      1539</td><td>     46818</td></tr><tr><td><strong>1</strong></td><td>Houston Fire Department (HFD)</td><td>White     </td><td>Male      </td><td>     63166</td><td>      2885</td><td>     66051</td></tr><tr><td><strong>2</strong></td><td>Houston Police Department-HPD</td><td>Black     </td><td>Male      </td><td>     66614</td><td>       619</td><td>     67233</td></tr><tr><td><strong>3</strong></td><td>Public Works & Engineering-PWE</td><td>Asian     </td><td>Male      </td><td>     71680</td><td>      3010</td><td>     74690</td></tr><tr><td><strong>4</strong></td><td>Houston Airport System (HAS)</td><td>White     </td><td>Male      </td><td>     42390</td><td>      3180</td><td>     45570</td></tr></tbody></table>
+<table><thead><tr><th></th><th>department</th><th>race      </th><th>gender    </th><th>salary    </th><th>bonus     </th><th>total salary</th></tr></thead><tbody><tr><td><strong>0</strong></td><td>Houston Police Department-HPD</td><td>White     </td><td>Male      </td><td>     45279</td><td>      3536</td><td>     48815</td></tr><tr><td><strong>1</strong></td><td>Houston Fire Department (HFD)</td><td>White     </td><td>Male      </td><td>     63166</td><td>      1296</td><td>     64462</td></tr><tr><td><strong>2</strong></td><td>Houston Police Department-HPD</td><td>Black     </td><td>Male      </td><td>     66614</td><td>       511</td><td>     67125</td></tr><tr><td><strong>3</strong></td><td>Public Works & Engineering-PWE</td><td>Asian     </td><td>Male      </td><td>     71680</td><td>      4267</td><td>     75947</td></tr><tr><td><strong>4</strong></td><td>Houston Airport System (HAS)</td><td>White     </td><td>Male      </td><td>     42390</td><td>      3766</td><td>     46156</td></tr></tbody></table>
 
 
 
@@ -671,13 +681,13 @@ Take the nth difference.
 
 
 ```python
-df['salary'].diff(2).head(10)
+df.diff(2).head(10)
 ```
 
 
 
 
-<table><thead><tr><th></th><th>salary    </th></tr></thead><tbody><tr><td><strong>0</strong></td><td>       nan</td></tr><tr><td><strong>1</strong></td><td>       nan</td></tr><tr><td><strong>2</strong></td><td> 21335.000</td></tr><tr><td><strong>3</strong></td><td>  8514.000</td></tr><tr><td><strong>4</strong></td><td>-24224.000</td></tr><tr><td><strong>5</strong></td><td> 36282.000</td></tr><tr><td><strong>6</strong></td><td> 10254.000</td></tr><tr><td><strong>7</strong></td><td> 72454.000</td></tr><tr><td><strong>8</strong></td><td>-22297.000</td></tr><tr><td><strong>9</strong></td><td>-125147.000</td></tr></tbody></table>
+<table><thead><tr><th></th><th>department</th><th>race      </th><th>gender    </th><th>salary    </th><th>bonus     </th><th>total salary</th></tr></thead><tbody><tr><td><strong>0</strong></td><td>Houston Police Department-HPD</td><td>White     </td><td>Male      </td><td>       nan</td><td>       nan</td><td>       nan</td></tr><tr><td><strong>1</strong></td><td>Houston Fire Department (HFD)</td><td>White     </td><td>Male      </td><td>       nan</td><td>       nan</td><td>       nan</td></tr><tr><td><strong>2</strong></td><td>Houston Police Department-HPD</td><td>Black     </td><td>Male      </td><td> 21335.000</td><td> -3025.000</td><td> 18310.000</td></tr><tr><td><strong>3</strong></td><td>Public Works & Engineering-PWE</td><td>Asian     </td><td>Male      </td><td>  8514.000</td><td>  2971.000</td><td> 11485.000</td></tr><tr><td><strong>4</strong></td><td>Houston Airport System (HAS)</td><td>White     </td><td>Male      </td><td>-24224.000</td><td>  3255.000</td><td>-20969.000</td></tr><tr><td><strong>5</strong></td><td>Public Works & Engineering-PWE</td><td>White     </td><td>Male      </td><td> 36282.000</td><td> -2228.000</td><td> 34054.000</td></tr><tr><td><strong>6</strong></td><td>Houston Fire Department (HFD)</td><td>Hispanic  </td><td>Male      </td><td> 10254.000</td><td> -2672.000</td><td>  7582.000</td></tr><tr><td><strong>7</strong></td><td>Health & Human Services</td><td>Black     </td><td>Male      </td><td> 72454.000</td><td>  2893.000</td><td> 75347.000</td></tr><tr><td><strong>8</strong></td><td>Public Works & Engineering-PWE</td><td>Black     </td><td>Male      </td><td>-22297.000</td><td>  1134.000</td><td>-21163.000</td></tr><tr><td><strong>9</strong></td><td>Health & Human Services</td><td>Black     </td><td>Male      </td><td>-125147.000</td><td> -2283.000</td><td>-127430.000</td></tr></tbody></table>
 
 
 
@@ -685,13 +695,13 @@ Find the nth percentage change.
 
 
 ```python
-df['salary'].pct_change(2).head(10)
+df.pct_change(2).head(10)
 ```
 
 
 
 
-<table><thead><tr><th></th><th>salary    </th></tr></thead><tbody><tr><td><strong>0</strong></td><td>       nan</td></tr><tr><td><strong>1</strong></td><td>       nan</td></tr><tr><td><strong>2</strong></td><td>     0.471</td></tr><tr><td><strong>3</strong></td><td>     0.135</td></tr><tr><td><strong>4</strong></td><td>    -0.364</td></tr><tr><td><strong>5</strong></td><td>     0.506</td></tr><tr><td><strong>6</strong></td><td>     0.242</td></tr><tr><td><strong>7</strong></td><td>     0.671</td></tr><tr><td><strong>8</strong></td><td>    -0.424</td></tr><tr><td><strong>9</strong></td><td>    -0.694</td></tr></tbody></table>
+<table><thead><tr><th></th><th>department</th><th>race      </th><th>gender    </th><th>salary    </th><th>bonus     </th><th>total salary</th></tr></thead><tbody><tr><td><strong>0</strong></td><td>Houston Police Department-HPD</td><td>White     </td><td>Male      </td><td>       nan</td><td>       nan</td><td>       nan</td></tr><tr><td><strong>1</strong></td><td>Houston Fire Department (HFD)</td><td>White     </td><td>Male      </td><td>       nan</td><td>       nan</td><td>       nan</td></tr><tr><td><strong>2</strong></td><td>Houston Police Department-HPD</td><td>Black     </td><td>Male      </td><td>     0.471</td><td>    -0.855</td><td>     0.375</td></tr><tr><td><strong>3</strong></td><td>Public Works & Engineering-PWE</td><td>Asian     </td><td>Male      </td><td>     0.135</td><td>     2.292</td><td>     0.178</td></tr><tr><td><strong>4</strong></td><td>Houston Airport System (HAS)</td><td>White     </td><td>Male      </td><td>    -0.364</td><td>     6.370</td><td>    -0.312</td></tr><tr><td><strong>5</strong></td><td>Public Works & Engineering-PWE</td><td>White     </td><td>Male      </td><td>     0.506</td><td>    -0.522</td><td>     0.448</td></tr><tr><td><strong>6</strong></td><td>Houston Fire Department (HFD)</td><td>Hispanic  </td><td>Male      </td><td>     0.242</td><td>    -0.710</td><td>     0.164</td></tr><tr><td><strong>7</strong></td><td>Health & Human Services</td><td>Black     </td><td>Male      </td><td>     0.671</td><td>     1.419</td><td>     0.685</td></tr><tr><td><strong>8</strong></td><td>Public Works & Engineering-PWE</td><td>Black     </td><td>Male      </td><td>    -0.424</td><td>     1.037</td><td>    -0.394</td></tr><tr><td><strong>9</strong></td><td>Health & Human Services</td><td>Black     </td><td>Male      </td><td>    -0.694</td><td>    -0.463</td><td>    -0.688</td></tr></tbody></table>
 
 
 
@@ -705,7 +715,7 @@ df.sort_values('salary').head()
 
 
 
-<table><thead><tr><th></th><th>department</th><th>race      </th><th>gender    </th><th>salary    </th><th>bonus     </th><th>total salary</th></tr></thead><tbody><tr><td><strong>0</strong></td><td>Houston Police Department-HPD</td><td>Black     </td><td>Female    </td><td>     24960</td><td>      1335</td><td>     26295</td></tr><tr><td><strong>1</strong></td><td>Public Works & Engineering-PWE</td><td>Hispanic  </td><td>Male      </td><td>     26104</td><td>       666</td><td>     26770</td></tr><tr><td><strong>2</strong></td><td>Public Works & Engineering-PWE</td><td>Black     </td><td>Female    </td><td>     26125</td><td>      3904</td><td>     30029</td></tr><tr><td><strong>3</strong></td><td>Houston Airport System (HAS)</td><td>Hispanic  </td><td>Female    </td><td>     26125</td><td>      3352</td><td>     29477</td></tr><tr><td><strong>4</strong></td><td>Houston Airport System (HAS)</td><td>Black     </td><td>Female    </td><td>     26125</td><td>      4150</td><td>     30275</td></tr></tbody></table>
+<table><thead><tr><th></th><th>department</th><th>race      </th><th>gender    </th><th>salary    </th><th>bonus     </th><th>total salary</th></tr></thead><tbody><tr><td><strong>0</strong></td><td>Houston Police Department-HPD</td><td>Black     </td><td>Female    </td><td>     24960</td><td>       953</td><td>     25913</td></tr><tr><td><strong>1</strong></td><td>Public Works & Engineering-PWE</td><td>Hispanic  </td><td>Male      </td><td>     26104</td><td>      4258</td><td>     30362</td></tr><tr><td><strong>2</strong></td><td>Public Works & Engineering-PWE</td><td>Black     </td><td>Female    </td><td>     26125</td><td>      3247</td><td>     29372</td></tr><tr><td><strong>3</strong></td><td>Houston Airport System (HAS)</td><td>Hispanic  </td><td>Female    </td><td>     26125</td><td>       832</td><td>     26957</td></tr><tr><td><strong>4</strong></td><td>Houston Airport System (HAS)</td><td>Black     </td><td>Female    </td><td>     26125</td><td>      2461</td><td>     28586</td></tr></tbody></table>
 
 
 
@@ -719,7 +729,7 @@ df.sort_values('salary', asc=False).head()
 
 
 
-<table><thead><tr><th></th><th>department</th><th>race      </th><th>gender    </th><th>salary    </th><th>bonus     </th><th>total salary</th></tr></thead><tbody><tr><td><strong>0</strong></td><td>Houston Fire Department (HFD)</td><td>White     </td><td>Male      </td><td>    210588</td><td>       364</td><td>    210952</td></tr><tr><td><strong>1</strong></td><td>Houston Police Department-HPD</td><td>White     </td><td>Male      </td><td>    199596</td><td>      2164</td><td>    201760</td></tr><tr><td><strong>2</strong></td><td>Houston Airport System (HAS)</td><td>Black     </td><td>Male      </td><td>    186192</td><td>       948</td><td>    187140</td></tr><tr><td><strong>3</strong></td><td>Health & Human Services</td><td>Black     </td><td>Male      </td><td>    180416</td><td>      1577</td><td>    181993</td></tr><tr><td><strong>4</strong></td><td>Public Works & Engineering-PWE</td><td>White     </td><td>Female    </td><td>    178331</td><td>      4891</td><td>    183222</td></tr></tbody></table>
+<table><thead><tr><th></th><th>department</th><th>race      </th><th>gender    </th><th>salary    </th><th>bonus     </th><th>total salary</th></tr></thead><tbody><tr><td><strong>0</strong></td><td>Houston Fire Department (HFD)</td><td>White     </td><td>Male      </td><td>    210588</td><td>      3724</td><td>    214312</td></tr><tr><td><strong>1</strong></td><td>Houston Police Department-HPD</td><td>White     </td><td>Male      </td><td>    199596</td><td>       848</td><td>    200444</td></tr><tr><td><strong>2</strong></td><td>Houston Airport System (HAS)</td><td>Black     </td><td>Male      </td><td>    186192</td><td>      1778</td><td>    187970</td></tr><tr><td><strong>3</strong></td><td>Health & Human Services</td><td>Black     </td><td>Male      </td><td>    180416</td><td>      4932</td><td>    185348</td></tr><tr><td><strong>4</strong></td><td>Public Works & Engineering-PWE</td><td>White     </td><td>Female    </td><td>    178331</td><td>      2124</td><td>    180455</td></tr></tbody></table>
 
 
 
@@ -733,7 +743,7 @@ df.sort_values(['race', 'salary']).head()
 
 
 
-<table><thead><tr><th></th><th>department</th><th>race      </th><th>gender    </th><th>salary    </th><th>bonus     </th><th>total salary</th></tr></thead><tbody><tr><td><strong>0</strong></td><td>Houston Airport System (HAS)</td><td>Asian     </td><td>Female    </td><td>     26125</td><td>      4665</td><td>     30790</td></tr><tr><td><strong>1</strong></td><td>Houston Police Department-HPD</td><td>Asian     </td><td>Male      </td><td>     27914</td><td>      2068</td><td>     29982</td></tr><tr><td><strong>2</strong></td><td>Houston Police Department-HPD</td><td>Asian     </td><td>Male      </td><td>     28169</td><td>       246</td><td>     28415</td></tr><tr><td><strong>3</strong></td><td>Public Works & Engineering-PWE</td><td>Asian     </td><td>Male      </td><td>     28995</td><td>      3747</td><td>     32742</td></tr><tr><td><strong>4</strong></td><td>Public Works & Engineering-PWE</td><td>Asian     </td><td>Male      </td><td>     30347</td><td>      1445</td><td>     31792</td></tr></tbody></table>
+<table><thead><tr><th></th><th>department</th><th>race      </th><th>gender    </th><th>salary    </th><th>bonus     </th><th>total salary</th></tr></thead><tbody><tr><td><strong>0</strong></td><td>Houston Airport System (HAS)</td><td>Asian     </td><td>Female    </td><td>     26125</td><td>      4446</td><td>     30571</td></tr><tr><td><strong>1</strong></td><td>Houston Police Department-HPD</td><td>Asian     </td><td>Male      </td><td>     27914</td><td>      2855</td><td>     30769</td></tr><tr><td><strong>2</strong></td><td>Houston Police Department-HPD</td><td>Asian     </td><td>Male      </td><td>     28169</td><td>      2572</td><td>     30741</td></tr><tr><td><strong>3</strong></td><td>Public Works & Engineering-PWE</td><td>Asian     </td><td>Male      </td><td>     28995</td><td>      2874</td><td>     31869</td></tr><tr><td><strong>4</strong></td><td>Public Works & Engineering-PWE</td><td>Asian     </td><td>Male      </td><td>     30347</td><td>      4938</td><td>     35285</td></tr></tbody></table>
 
 
 
@@ -747,7 +757,7 @@ df.sample(n=3)
 
 
 
-<table><thead><tr><th></th><th>department</th><th>race      </th><th>gender    </th><th>salary    </th><th>bonus     </th><th>total salary</th></tr></thead><tbody><tr><td><strong>0</strong></td><td>Houston Fire Department (HFD)</td><td>Black     </td><td>Male      </td><td>     61226</td><td>      4609</td><td>     65835</td></tr><tr><td><strong>1</strong></td><td>Public Works & Engineering-PWE</td><td>Hispanic  </td><td>Male      </td><td>     31158</td><td>      3846</td><td>     35004</td></tr><tr><td><strong>2</strong></td><td>Houston Police Department-HPD</td><td>Asian     </td><td>Male      </td><td>     60347</td><td>      1086</td><td>     61433</td></tr></tbody></table>
+<table><thead><tr><th></th><th>department</th><th>race      </th><th>gender    </th><th>salary    </th><th>bonus     </th><th>total salary</th></tr></thead><tbody><tr><td><strong>0</strong></td><td>Houston Fire Department (HFD)</td><td>White     </td><td>Male      </td><td>     62540</td><td>      2995</td><td>     65535</td></tr><tr><td><strong>1</strong></td><td>Public Works & Engineering-PWE</td><td>White     </td><td>Male      </td><td>     63336</td><td>      1547</td><td>     64883</td></tr><tr><td><strong>2</strong></td><td>Houston Police Department-HPD</td><td>White     </td><td>Male      </td><td>     52514</td><td>      1150</td><td>     53664</td></tr></tbody></table>
 
 
 
@@ -761,7 +771,7 @@ df.sample(frac=.005)
 
 
 
-<table><thead><tr><th></th><th>department</th><th>race      </th><th>gender    </th><th>salary    </th><th>bonus     </th><th>total salary</th></tr></thead><tbody><tr><td><strong>0</strong></td><td>Public Works & Engineering-PWE</td><td>Asian     </td><td>Male      </td><td>     32635</td><td>      3802</td><td>     36437</td></tr><tr><td><strong>1</strong></td><td>Houston Airport System (HAS)</td><td>Hispanic  </td><td>Male      </td><td>     42099</td><td>      4378</td><td>     46477</td></tr><tr><td><strong>2</strong></td><td>Public Works & Engineering-PWE</td><td>Black     </td><td>Male      </td><td>    104389</td><td>      3602</td><td>    107991</td></tr><tr><td><strong>3</strong></td><td>Public Works & Engineering-PWE</td><td>White     </td><td>Male      </td><td>     43514</td><td>      2222</td><td>     45736</td></tr><tr><td><strong>4</strong></td><td>Public Works & Engineering-PWE</td><td>Black     </td><td>Female    </td><td>     33488</td><td>       848</td><td>     34336</td></tr><tr><td><strong>5</strong></td><td>Houston Fire Department (HFD)</td><td>White     </td><td>Male      </td><td>     70181</td><td>      1109</td><td>     71290</td></tr><tr><td><strong>6</strong></td><td>Public Works & Engineering-PWE</td><td>White     </td><td>Male      </td><td>     60715</td><td>      4480</td><td>     65195</td></tr></tbody></table>
+<table><thead><tr><th></th><th>department</th><th>race      </th><th>gender    </th><th>salary    </th><th>bonus     </th><th>total salary</th></tr></thead><tbody><tr><td><strong>0</strong></td><td>Houston Police Department-HPD</td><td>Hispanic  </td><td>Female    </td><td>     60347</td><td>      1200</td><td>     61547</td></tr><tr><td><strong>1</strong></td><td>Public Works & Engineering-PWE</td><td>Black     </td><td>Male      </td><td>     49109</td><td>      3598</td><td>     52707</td></tr><tr><td><strong>2</strong></td><td>Health & Human Services</td><td>Black     </td><td>Female    </td><td>     48984</td><td>      4602</td><td>     53586</td></tr><tr><td><strong>3</strong></td><td>Houston Police Department-HPD</td><td>White     </td><td>Male      </td><td>     55461</td><td>      2813</td><td>     58274</td></tr><tr><td><strong>4</strong></td><td>Houston Airport System (HAS)</td><td>Black     </td><td>Female    </td><td>     29286</td><td>      1877</td><td>     31163</td></tr><tr><td><strong>5</strong></td><td>Houston Police Department-HPD</td><td>Asian     </td><td>Male      </td><td>     66614</td><td>      4480</td><td>     71094</td></tr><tr><td><strong>6</strong></td><td>Houston Fire Department (HFD)</td><td>White     </td><td>Male      </td><td>     28024</td><td>      4475</td><td>     32499</td></tr></tbody></table>
 
 
 
@@ -775,7 +785,7 @@ df.sample(n=10000, replace=True).head()
 
 
 
-<table><thead><tr><th></th><th>department</th><th>race      </th><th>gender    </th><th>salary    </th><th>bonus     </th><th>total salary</th></tr></thead><tbody><tr><td><strong>0</strong></td><td>Houston Fire Department (HFD)</td><td>White     </td><td>Male      </td><td>     61921</td><td>       172</td><td>     62093</td></tr><tr><td><strong>1</strong></td><td>Houston Police Department-HPD</td><td>Asian     </td><td>Male      </td><td>     61643</td><td>       659</td><td>     62302</td></tr><tr><td><strong>2</strong></td><td>Houston Police Department-HPD</td><td>White     </td><td>Male      </td><td>     43443</td><td>      3539</td><td>     46982</td></tr><tr><td><strong>3</strong></td><td>Health & Human Services</td><td>White     </td><td>Male      </td><td>    120799</td><td>      2447</td><td>    123246</td></tr><tr><td><strong>4</strong></td><td>Public Works & Engineering-PWE</td><td>White     </td><td>Male      </td><td>     98895</td><td>      4571</td><td>    103466</td></tr></tbody></table>
+<table><thead><tr><th></th><th>department</th><th>race      </th><th>gender    </th><th>salary    </th><th>bonus     </th><th>total salary</th></tr></thead><tbody><tr><td><strong>0</strong></td><td>Parks & Recreation</td><td>Black     </td><td>Female    </td><td>     31075</td><td>      1665</td><td>     32740</td></tr><tr><td><strong>1</strong></td><td>Public Works & Engineering-PWE</td><td>Hispanic  </td><td>Male      </td><td>     67038</td><td>       644</td><td>     67682</td></tr><tr><td><strong>2</strong></td><td>Houston Police Department-HPD</td><td>Black     </td><td>Male      </td><td>     37024</td><td>      1532</td><td>     38556</td></tr><tr><td><strong>3</strong></td><td>Health & Human Services</td><td>Black     </td><td>Female    </td><td>     57433</td><td>      3106</td><td>     60539</td></tr><tr><td><strong>4</strong></td><td>Public Works & Engineering-PWE</td><td>Black     </td><td>Male      </td><td>     53373</td><td>       924</td><td>     54297</td></tr></tbody></table>
 
 
 
