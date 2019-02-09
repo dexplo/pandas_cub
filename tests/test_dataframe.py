@@ -388,44 +388,52 @@ class TestOtherMethods:
 
 a42 = np.array([-11, 5, 3])
 b42 = np.array([3.4, 5.1, -6])
-df42 = pdc.DataFrame({'a': a42, 'b': b42})
+c42 = np.array(['val1', 'val2', 'val3'])
+df42 = pdc.DataFrame({'a': a42, 'b': b42,'c': c42})
 
 
 class TestNonAgg:
 
     def test_abs(self):
         df_result = df42.abs()
-        df_answer = pdc.DataFrame({'a': np.abs(a42), 'b': np.abs(b42)})
+        df_answer = pdc.DataFrame({'a': np.abs(a42),
+                                   'b': np.abs(b42),
+                                   'c': c42})
         assert_df_equals(df_result, df_answer)
 
     def test_cummin(self):
         df_result = df42.cummin()
         df_answer = pdc.DataFrame({'a': np.array([-11, -11, -11]),
-                                   'b': np.array([3.4, 3.4, -6])})
+                                   'b': np.array([3.4, 3.4, -6]),
+                                   'c': c42})
         assert_df_equals(df_result, df_answer)
 
     def test_cummax(self):
         df_result = df42.cummax()
         df_answer = pdc.DataFrame({'a': np.array([-11, 5, 5]),
-                                   'b': np.array([3.4, 5.1, 5.1])})
+                                   'b': np.array([3.4, 5.1, 5.1]),
+                                   'c': c42})
         assert_df_equals(df_result, df_answer)
 
     def test_cumsum(self):
         df_result = df42.cumsum()
         df_answer = pdc.DataFrame({'a': np.array([-11, -6, -3]),
-                                   'b': np.array([3.4, 8.5, 2.5])})
+                                   'b': np.array([3.4, 8.5, 2.5]),
+                                   'c': c42})
         assert_df_equals(df_result, df_answer)
 
     def test_clip(self):
         df_result = df42.clip(0, 4)
         df_answer = pdc.DataFrame({'a': np.array([0, 4, 3]),
-                                   'b': np.array([3.4, 4, 0])})
+                                   'b': np.array([3.4, 4, 0]),
+                                   'c': c42})
         assert_df_equals(df_result, df_answer)
 
     def test_round(self):
         df_result = df42.round(0)
         df_answer = pdc.DataFrame({'a': np.array([-11, 5, 3]),
-                                   'b': np.array([3, 5, -6])})
+                                   'b': np.array([3, 5, -6]),
+                                   'c': c42})
         assert_df_equals(df_result, df_answer)
 
     def test_copy(self):
@@ -434,13 +442,15 @@ class TestNonAgg:
     def test_diff(self):
         df_result = df42.diff(1)
         df_answer = pdc.DataFrame({'a': np.array([np.nan, 16, -2]),
-                                   'b': np.array([np.nan, 1.7, -11.1])})
+                                   'b': np.array([np.nan, 1.7, -11.1]),
+                                   'c': c42})
         assert_df_equals(df_result, df_answer)
 
     def test_pct_change(self):
         df_result = df42.pct_change(1)
         df_answer = pdc.DataFrame({'a': np.array([np.nan, 16 / -11, -2 / 5]),
-                                   'b': np.array([np.nan, 1.7 / 3.4, -11.1 / 5.1])})
+                                   'b': np.array([np.nan, 1.7 / 3.4, -11.1 / 5.1]),
+                                   'c': c42})
         assert_df_equals(df_result, df_answer)
 
 

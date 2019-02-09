@@ -1,6 +1,6 @@
 import numpy as np
 
-__version__ = '0.0.3'
+__version__ = '0.0.6'
 
 
 DTYPE_NAME = {'O': 'string', 'i': 'int', 'f': 'float', 'b': 'bool'}
@@ -326,7 +326,6 @@ class DataFrame:
         for col in col_selection:
             new_data[col] = self._data[col][row_selection]
         return DataFrame(new_data)
-
 
     def _ipython_key_completions_(self):
         # allows for tab completion when doing df['c
@@ -676,11 +675,11 @@ class DataFrame:
         """
         new_data = {}
         for col, values in self._data.items():
-            try:
-                val = func(values, **kwargs)
-            except TypeError:
-                continue
-            new_data[col] = val
+            if values.dtype.kind in 'bif':
+                values = func(values, **kwargs)
+            else:
+                values = values.copy()
+            new_data[col] = values
         return DataFrame(new_data)
 
     def diff(self, n=1):
@@ -697,19 +696,16 @@ class DataFrame:
         -------
         A DataFrame
         """
-        new_data = {}
-        for col, values in self._data.items():
-            try:
-                val = values - np.roll(values, n)
-                val = val.astype('float')
-                if n >= 0:
-                    val[:n] = np.NAN
-                else:
-                    val[n:] = np.NAN
-            except TypeError:
-                continue
-            new_data[col] = val
-        return DataFrame(new_data)
+        def func(values):
+            values_shifted = np.roll(values, n)
+            values = values - values_shifted
+            values = values.astype('float')
+            if n >= 0:
+                values[:n] = np.NAN
+            else:
+                values[n:] = np.NAN
+            return values
+        return self._non_agg(func)
 
     def pct_change(self, n):
         """
@@ -725,15 +721,16 @@ class DataFrame:
         -------
         A DataFrame
         """
-        df = self.diff(n)
-        new_data = {}
-        for col, values in df._data.items():
-            try:
-                val = values / np.roll(self._data[col], n)
-            except TypeError:
-                continue
-            new_data[col] = val
-        return DataFrame(new_data)
+        def func(values):
+            values_shifted = np.roll(values, n)
+            values = values - values_shifted
+            values = values.astype('float')
+            if n >= 0:
+                values[:n] = np.NAN
+            else:
+                values[n:] = np.NAN
+            return values / values_shifted
+        return self._non_agg(func)
 
     #### Arithmetic and Comparison Operators ####
 
